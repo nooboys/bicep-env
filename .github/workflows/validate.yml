@@ -47,7 +47,10 @@ jobs:
             --name whatif-${{ github.run_id }} \
             --template-file qa.bicep \
             --parameters qa.parameter.json > whatif
-            
+
+      # echo shell script
+    - name: echo whatif
+      run: cat whatif
             
       # Create string output of Whatif
     - name: Create String Output
